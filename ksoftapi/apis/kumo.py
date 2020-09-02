@@ -135,7 +135,7 @@ class Kumo:
         if r.get('code', 200) == 404:
             raise NoResults
 
-        result = r['data']
+        result = r
         if isinstance(result, list):
             return [Currency(r) for r in result]
 
