@@ -88,7 +88,11 @@ class Weather:
         self.units: str = data['units']
         self.location: LocationSimple = LocationSimple(data['location'])
 
-
+class Currency(object):
+    def __init__(self, data: dict):
+        self.value:float = data['value']
+        self.pretty: str = data['pretty']
+        
 class LyricResult:
     def __init__(self, data: dict):
         self.artist: str = data['artist']

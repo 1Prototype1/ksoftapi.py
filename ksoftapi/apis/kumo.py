@@ -1,7 +1,7 @@
 from typing import List, Union
 
 from ..errors import NoResults
-from ..models import Location, Weather
+from ..models import Location, Weather, Currency
 
 
 class Kumo:
@@ -128,3 +128,15 @@ class Kumo:
             return [Weather(r) for r in result]
 
         return Weather(result)
+
+    async def currency_conversion(self, _from: str, to: str, value: str) -> Union[Currency, List[Currency]]:
+        r = await self._client.http.get('/kumo/currency/{}'.format(report_type), params={"from": _from, "to": to, "value": value})
+
+        if r.get('code', 200) == 404:
+            raise NoResults
+
+        result = r['data']
+        if isinstance(result, list):
+            return [Currency(r) for r in result]
+
+        return Currency(result)
