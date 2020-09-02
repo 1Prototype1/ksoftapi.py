@@ -88,10 +88,25 @@ class Weather:
         self.units: str = data['units']
         self.location: LocationSimple = LocationSimple(data['location'])
 
-class Currency(object):
+class Currency:
     def __init__(self, data: dict):
         self.value:float = data['value']
         self.pretty: str = data['pretty']
+
+class GeoIP:
+    def __init__(self, data: dict):
+        self.city: str = data['city']
+        self.continent_code: str = data['continent_code']
+        self.continent_name: str = data['continent_name']
+        self.country_code: str = data['country_code']
+        self.country_name: str = data['country_name']
+        self.dma_code: str = data['dma_code']
+        self.latitude: float = data['latitude']
+        self.longitude: float = data['longitude']
+        self.postal_code: str = data['postal_code']
+        self.region: str = data['region']
+        self.time_zone: str = data['time_zone']
+        self.gmap: str = data['apis']['googlemaps']
         
 class LyricResult:
     def __init__(self, data: dict):

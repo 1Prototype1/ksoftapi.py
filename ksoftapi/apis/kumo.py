@@ -1,7 +1,7 @@
 from typing import List, Union
 
 from ..errors import NoResults
-from ..models import Location, Weather, Currency
+from ..models import Location, Weather, Currency, GeoIP
 
 
 class Kumo:
@@ -140,3 +140,15 @@ class Kumo:
             return [Currency(r) for r in result]
 
         return Currency(result)
+
+    async def trace_ip(self, ip: str) -> Union[GeoIP, List[GeoIP]]:
+        r = await self._client.http.get('/kumo/geoip', params={"ip": ip})
+
+        if r.get('code') == 404:
+            raise NoResults
+
+        result = r['data']
+        if isinstance(result, list):
+            return [GeoIP(r) for r in result]
+
+        return GeoIP(result)
