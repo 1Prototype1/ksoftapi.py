@@ -5,7 +5,7 @@ def get_requirements():
         requirements = f.read().splitlines()
     return requirements
 
-version = '0.2.4b'
+version = '0.2.4c'
 
 if not version:
     raise RuntimeError('Version is not set')
