@@ -1,13 +1,11 @@
 from setuptools import setup
 
-import ksoftapi
-
-
 def get_requirements():
     with open('requirements.txt') as f:
         requirements = f.read().splitlines()
     return requirements
 
+import ksoftapi
 
 version = ksoftapi.__version__
 
