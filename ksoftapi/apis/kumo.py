@@ -130,7 +130,7 @@ class Kumo:
         return Weather(result)
 
     async def currency_conversion(self, _from: str, to: str, value: str) -> Union[Currency, List[Currency]]:
-        r = await self._client.http.get('/kumo/currency/{}'.format(report_type), params={"from": _from, "to": to, "value": value})
+        r = await self._client.http.get('/kumo/currency/{}', params={"from": _from, "to": to, "value": value})
 
         if r.get('code', 200) == 404:
             raise NoResults
