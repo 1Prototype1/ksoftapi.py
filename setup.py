@@ -22,7 +22,7 @@ setup(
     long_description_content_type="text/markdown",
     author='1Prototype1',
     author_email='astonlopes1999@gmail.com',
-    url='https://github.com/1Prototype1/ksoftapi.py'
+    url='https://github.com/1Prototype1/ksoftapi.py',
     keywords=['ksoftapi'],
     install_requires=get_requirements(),
     classifiers=[
