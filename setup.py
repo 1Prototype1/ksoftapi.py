@@ -5,9 +5,7 @@ def get_requirements():
         requirements = f.read().splitlines()
     return requirements
 
-import ksoftapi
-
-version = ksoftapi.__version__
+version = '0.2.4a'
 
 if not version:
     raise RuntimeError('Version is not set')
