@@ -17,13 +17,12 @@ setup(
     name='ksoftapi',
     packages=['ksoftapi', 'ksoftapi.apis'],
     version=version,
-    description='The official KSoft.SI API Wrapper.',
+    description='The unofficial modded KSoft.SI API Wrapper',
     long_description=readme,
     long_description_content_type="text/markdown",
-    author='AndyTempel',
-    author_email='support@ksoft.si',
-    url='https://github.com/KSoft-Si/ksoftapi.py',
-    download_url=f'https://github.com/KSoft-Si/ksoftapi.py/archive/{version}.tar.gz',
+    author='1Prototype1',
+    author_email='astonlopes1999@gmail.com',
+    url='https://github.com/1Prototype1/ksoftapi.py'
     keywords=['ksoftapi'],
     install_requires=get_requirements(),
     classifiers=[
