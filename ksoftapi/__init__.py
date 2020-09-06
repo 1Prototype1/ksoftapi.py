@@ -4,11 +4,11 @@
 KSoft.Si API Wrapper with discord.py integration
 """
 
-__title__ = 'ksoftapi'
-__author__ = 'AndyTempel'
+__title__ = 'ksoftapi [Unofficial]'
+__author__ = '1Prototype1'
 __license__ = 'GNU'
 __copyright__ = 'Copyright 2018-2020 AndyTempel'
-__version__ = '0.2.4a'
+__version__ = '0.2.4d'
 
 import logging
 from collections import namedtuple
