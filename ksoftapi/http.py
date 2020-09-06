@@ -22,7 +22,7 @@ class HttpClient:
     def __init__(self, authorization, loop):
         self._default_headers = {
             'Authorization': 'Bearer ' + authorization,
-            'User-Agent': 'KSoftApi.py [UnOffcial] v{} (https://github.com/1Prototype1/ksoftapi.py)'.format(__version__),
+            'User-Agent': 'KSoftApi.py [UnOfficial] v{} (https://github.com/1Prototype1/ksoftapi.py)'.format(__version__),
             'X-Powered-By': 'aiohttp {}/Python {}'.format(aiohttp.__version__, sys.version)
         }
         self._session = aiohttp.ClientSession(loop=loop)
